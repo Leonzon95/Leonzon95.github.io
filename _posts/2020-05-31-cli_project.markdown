@@ -1,7 +1,7 @@
 ---
 layout: post
 title:      "CLI Project"
-date:       2020-05-31 22:39:24 +0000
+date:       2020-05-31 18:39:25 -0400
 permalink:  cli_project
 ---
 
@@ -41,12 +41,12 @@ def characters
             end
         end
         character_array
-    end
-		
-		def residents
+end
+	
+def residents
         resident_array = Character.all.select{|resident| resident.origin == self}
         resident_array
-    end
+end
 ```
 
 This way only the character class keeps track of the relationship and the rest just check to see if they match with a certain character. It keeps it simpler and less likely to get realationship related bugs.
