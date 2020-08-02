@@ -15,13 +15,13 @@ At first:
 class User < ApplicationRecord
     has_many :scheduled_workouts  #join table
     has_many :workouts, through: :scheduled_workouts
-		...
+	
 end
 
 class Workout < ApplicationRecord
     has_many :scheduled_workouts  #join table
     has_many :users, through: :scheduled_workouts
-		...
+	
 end
 ```
 
